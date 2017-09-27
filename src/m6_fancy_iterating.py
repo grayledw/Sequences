@@ -53,8 +53,8 @@ def main():
                                   sequence3, sequence4)
     run_test_print_items_at_odd_indices(sequence1, sequence2,
                                   sequence3, sequence4)
-    #run_test_print_items_in_second_half(sequence1, sequence2,
-                                       #sequence3, sequence4)
+    run_test_print_items_in_second_half(sequence1, sequence2,
+                                       sequence3, sequence4)
 
     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
 #
@@ -431,6 +431,8 @@ def print_items_at_odd_indices(sequence):
 #   -- in this sample problem, the second half.
 # ----------------------------------------------------------------------
 def print_items_in_second_half(sequence):
+    for k in range((len(sequence)//2), len(sequence)):
+        print (sequence[k])
     """
     Prints the items in the second half of the given sequence.
     For odd-length sequences, includes the middle item in the sequence.
@@ -454,8 +456,7 @@ def print_items_in_second_half(sequence):
     #   Use   //   for integer division.
     # ------------------------------------------------------------------
 
-    for k in range((sequence // 2) + 1):
-        print(sequence[k])
+
 
 
 # ----------------------------------------------------------------------
@@ -539,13 +540,14 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # Done: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
     # ------------------------------------------------------------------
 
     for k in range(len(sequence)):
+        if type(sequence[k]) == int:
             if sequence[k] % 2 == 1:
                 print(sequence[k], 'is at index', k)
 

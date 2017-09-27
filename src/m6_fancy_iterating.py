@@ -431,8 +431,7 @@ def print_items_at_odd_indices(sequence):
 #   -- in this sample problem, the second half.
 # ----------------------------------------------------------------------
 def print_items_in_second_half(sequence):
-    for k in range((len(sequence)//2), len(sequence)):
-        print (sequence[k])
+
     """
     Prints the items in the second half of the given sequence.
     For odd-length sequences, includes the middle item in the sequence.
@@ -456,7 +455,8 @@ def print_items_in_second_half(sequence):
     #   Use   //   for integer division.
     # ------------------------------------------------------------------
 
-
+    for k in range((len(sequence)//2), len(sequence)):
+        print (sequence[k])
 
 
 # ----------------------------------------------------------------------
